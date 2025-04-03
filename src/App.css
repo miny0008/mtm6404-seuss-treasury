@@ -1,41 +1,118 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Book List */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.book-list a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-list img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.book-list img:hover {
+  transform: scale(1.1);
+}
+
+.book-list p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Book Details */
+.book-details {
+  text-align: center;
+  padding: 20px;
+}
+
+.book-details img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.book-details p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+/* Quotes Section */
+.quotes-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.quotes-container button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quotes-container button:hover {
+  background-color: #e5533d;
+}
+
+.quotes-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quotes-container li {
+  font-size: 18px;
+  margin: 10px 0;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Standardized Book Image Size */
+.book-list img,
+.book-details img {
+  width: 180px;  /* Set a fixed width */
+  height: 250px; /* Set a fixed height */
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.book-list img:hover {
+  transform: scale(1.1);
 }
